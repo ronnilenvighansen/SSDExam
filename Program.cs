@@ -10,7 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 DotNetEnv.Env.Load();
 
-//var connectionString = "Data Source=SecureNotes.db";
 var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
@@ -26,8 +25,10 @@ builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
-        options.Authority = "https://localhost:8443/realms/SecureNotes";
-        options.Audience = "secure-notes-client";
+        var authority = Environment.GetEnvironmentVariable("Jwt_Authority");
+        var audience = Environment.GetEnvironmentVariable("Jwt_Audience");
+        options.Authority = authority;
+        options.Audience = audience;
         options.RequireHttpsMetadata = true;
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -68,7 +69,6 @@ builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(7084, listenOptions =>
     {
-        //var certPassword = builder.Configuration["CertPassword"];
         var certPassword = Environment.GetEnvironmentVariable("CertPassword");
         listenOptions.UseHttps("certs/localhost.pfx", certPassword);
     });
