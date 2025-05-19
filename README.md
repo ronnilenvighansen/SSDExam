@@ -102,7 +102,7 @@ Running the Application:
 
 dotnet run
 
-Running Keycloak in Docker
+Running Keycloak in Docker:
 
 docker run -p 8443:8443 \
   -v "$PWD/certs/localhost.pfx:/etc/x509/https/keystore.pfx" \
@@ -115,7 +115,7 @@ docker run -p 8443:8443 \
   quay.io/keycloak/keycloak:latest \
   start --https-port=8443
 
-Keycloak Configuration
+Keycloak Configuration:
 
 Realm:
 
@@ -134,6 +134,7 @@ Client:
 Name: your-client
 
 Root URL: your-https-launch-url
+
 Redirect URIs: your-https-launch-url/signin-oidc
 
 Web Origins: your-https-launch-url
@@ -173,11 +174,11 @@ Header Prefix: Bearer
 
 API Endpoints:
 
-Get Notes (for authenticated user)
+Get Notes (for authenticated user):
 
 GET your-https-launch-url/your-controller
 
-Create Note
+Create Note:
 
 POST your-https-launch-url/your-controller
 
@@ -186,7 +187,8 @@ Body (raw JSON):
   "content": "Hello!"
 }
 
-Delete All Notes
+Delete All Notes:
+
 POST your-https-launch-url/your-controller/your-api-endpoint
 
 Notes:
