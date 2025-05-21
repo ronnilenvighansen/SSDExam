@@ -159,12 +159,9 @@ Auth Type: OAuth 2.0
 
 Grant Type: Authorization Code with PKCE
 
-Auth URL:
+Auth URL: your-https-launch-url/realms/your-realm/protocol/openid-connect/auth
 
-your-https-launch-url/realms/your-realm/protocol/openid-connect/auth
-
-Token URL:
-your-https-launch-url/realms/your-realm/protocol/openid-connect/token
+Token URL: your-https-launch-url/realms/your-realm/protocol/openid-connect/token
 
 Client ID: your-client
 
