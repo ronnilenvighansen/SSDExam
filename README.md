@@ -107,8 +107,8 @@ dotnet run
 Running Keycloak in Docker:
 
 docker run -p 8443:8443 \
-  -v "$PWD/certs/localhost.pfx:/etc/x509/https/keystore.pfx" \
-  -v "$PWD/keycloak-data:/opt/keycloak/data" \
+  -v "$PWD/your-cert-folder/your-.pfx:/etc/x509/https/keystore.pfx" \
+  -v "$PWD/your-data-for-keycloak-folder:/opt/keycloak/data" \
   -v "$PWD/keycloak.conf:/opt/keycloak/conf/keycloak.conf" \
   -e KEYCLOAK_ADMIN=admin \
   -e KEYCLOAK_ADMIN_PASSWORD=admin \
