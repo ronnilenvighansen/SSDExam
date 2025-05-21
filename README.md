@@ -196,3 +196,11 @@ Notes:
 This project uses HTTPS with a self-signed certificate.
 
 Ensure your browser and Postman trust localhost.crt.
+
+SBOM:
+
+Install CycloneDX: dotnet tool install --global CycloneDX
+
+Generate SBOM: 
+
+dotnet CycloneDX ./SecureNotes.sln -j

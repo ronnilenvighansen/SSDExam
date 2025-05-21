@@ -7,3 +7,4 @@ keycloak-data/
 appsettings.*
 Migrations/
 .env
+bom.json
