@@ -23,6 +23,8 @@ namespace SecureNotes.Services
             using var aes = Aes.Create();
             aes.Key = key;
             aes.GenerateIV();
+            aes.Mode = CipherMode.CBC;
+            aes.Padding = PaddingMode.PKCS7;
             var iv = aes.IV;
 
             using var encryptor = aes.CreateEncryptor();
@@ -45,6 +47,8 @@ namespace SecureNotes.Services
 
             using var aes = Aes.Create();
             aes.Key = key;
+            aes.Mode = CipherMode.CBC;
+            aes.Padding = PaddingMode.PKCS7;
 
             var iv = new byte[aes.BlockSize / 8];
             Buffer.BlockCopy(combinedBytes, 0, iv, 0, iv.Length);

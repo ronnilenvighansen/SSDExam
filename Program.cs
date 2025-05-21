@@ -30,10 +30,12 @@ builder.Services.AddAuthentication("Bearer")
         options.Authority = authority;
         options.Audience = audience;
         options.RequireHttpsMetadata = true;
+
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateAudience = false,
+            ValidateAudience = true,
             ValidateIssuer = true,
+            ValidAudience = audience,
             RoleClaimType = "roles",
             NameClaimType = "preferred_username"
         };
