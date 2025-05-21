@@ -71,8 +71,9 @@ builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(7084, listenOptions =>
     {
+        var cert = Environment.GetEnvironmentVariable("Cert");
         var certPassword = Environment.GetEnvironmentVariable("CertPassword");
-        listenOptions.UseHttps("certs/localhost.pfx", certPassword);
+        listenOptions.UseHttps(cert, certPassword);
     });
 });
 
