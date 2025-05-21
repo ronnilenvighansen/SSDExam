@@ -173,11 +173,11 @@ Header Prefix: Bearer
 
 6. API Endpoints:
 
-Get Notes:
+Get all notes for logged-in user:
 
 GET your-https-launch-url/your-controller
 
-Create Note:
+Create note:
 
 POST your-https-launch-url/your-controller
 
@@ -186,7 +186,7 @@ Body (raw JSON):
   "content": "Hello!"
 }
 
-Delete All Notes:
+Delete all notes for logged-in user:
 
 DELETE your-https-launch-url/your-controller/your-api-endpoint
 
