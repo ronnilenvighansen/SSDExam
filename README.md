@@ -173,7 +173,7 @@ Header Prefix: Bearer
 
 6. API Endpoints:
 
-Get Notes (for authenticated user):
+Get Notes:
 
 GET your-https-launch-url/your-controller
 
