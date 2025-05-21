@@ -21,6 +21,8 @@ Jwt_Audience=your-keycloak-client
 
 CertPassword=your-cert-password
 
+Cert=your-cert-folder/your-.pfx-file
+
 3. Generate HTTPS Certificates
 
 Create a folder:
