@@ -155,7 +155,7 @@ Roles: viewer, writer
 
 Postman Setup:
 
-OAuth 2.0 Auth
+Auth Type: OAuth 2.0
 
 Grant Type: Authorization Code with PKCE
 
