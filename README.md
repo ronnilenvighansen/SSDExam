@@ -189,7 +189,7 @@ Body (raw JSON):
 
 Delete All Notes:
 
-POST your-https-launch-url/your-controller/your-api-endpoint
+DELETE your-https-launch-url/your-controller/your-api-endpoint
 
 7. Notes:
 
