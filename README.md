@@ -86,7 +86,7 @@ openssl pkcs12 -export \
   -in your-.crt \
   -passout pass:your-cert-password
 
-Database Setup:
+4. Database Setup:
 
 Install EF CLI if not already installed:
 
@@ -115,7 +115,7 @@ docker run -p 8443:8443 \
   quay.io/keycloak/keycloak:latest \
   start --https-port=8443
 
-Keycloak Configuration:
+5. Keycloak Configuration:
 
 Realm:
 
@@ -172,7 +172,7 @@ Code Challenge Method: SHA-256
 
 Header Prefix: Bearer
 
-API Endpoints:
+6. API Endpoints:
 
 Get Notes (for authenticated user):
 
@@ -191,13 +191,13 @@ Delete All Notes:
 
 POST your-https-launch-url/your-controller/your-api-endpoint
 
-Notes:
+7. Notes:
 
 This project uses HTTPS with a self-signed certificate.
 
 Ensure your browser and Postman trust localhost.crt.
 
-SBOM:
+8. SBOM:
 
 Install CycloneDX: dotnet tool install --global CycloneDX
 

@@ -39,7 +39,7 @@ public class NotesController : ControllerBase
     }
 
     [Authorize(Roles = "deleter")]
-    [HttpPost("clear")]
+    [HttpDelete("clear")]
     public async Task<IActionResult> ClearNotes()
     {
         var username = User.Identity?.Name;

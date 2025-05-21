@@ -64,7 +64,6 @@ builder.Services.AddAuthentication("Bearer")
         };
     });
 
-
 builder.Services.AddAuthorization();
 
 builder.WebHost.ConfigureKestrel(options =>
